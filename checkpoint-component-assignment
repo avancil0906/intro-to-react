@@ -1,0 +1,24 @@
+####Questions
+>Peruse the Official React documentation by Facebook, note down anything interesting you find and discuss learnings with your mentor and Bloc Slack community. In addition, discuss with your mentor a strategy to read documentation more efficiently. This is a critically important skill to develop as software developer, as technologies keep evolving.
+
+* I think that once I get used to JSX I will appreciate it quite a bit. It's modular, more importantly the patterns are seemingly easily to follow.
+
+>Referring to the official documentation, build another simple React component from scratch similar to the one we built. Discuss your experience building the component from scratch with your mentor.
+
+* ```
+function Greetings(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+function App() {
+  return (
+    <div>
+      <Greetings name="Ashley" />
+      <Greetings name="Andre" />
+      <Greetings name="Katelyn" />
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
