@@ -1,0 +1,48 @@
+####Assignment
+
+>In your own words, explain the essential differences between props and state in React. Which is immutable or read-only, and which changes? Discuss the answer with your mentor.
+
+*  Props, which is shorthand for properties, are how components talk to eachother. Props are immutable, they represent constant data. State keeps track of mutable data, for example: user input.
+
+>Read the React official documentation on components and props, and brush up on JavaScript ES6 *classes
+
+>Built upon your component from the assignment after checkpoint 3, add in state and props to make sure you have fully mastered these core React properties.
+
+*
+```
+class Greetings extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
+
+  render() {
+    return (
+      <div>
+      <h1>Hello, {this.props.name}!</h1>
+      </div>
+    );
+  }
+}
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      number: 3
+    }
+  }
+  render() {
+    return (
+      <div>
+      <Greetings name="Ashley" />
+      <Greetings name="Andre" />
+      <Greetings name="Katelyn" />
+      <p>Number of people: {this.state.number}</p>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
